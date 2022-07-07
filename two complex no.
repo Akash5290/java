@@ -1,0 +1,44 @@
+import java.util.*;
+class Complex
+{
+ private int i,r;
+ 
+ public void Complex()
+ {
+     i=0;
+     r=0;
+ }
+ public void accept()
+ {   Scanner sc= new Scanner(System.in); 
+     System.out.println("enter value for r and i");
+     this.r=sc.nextInt();
+     this.i=sc.nextInt();
+     sc.close();
+ }
+ public void add(Complex a,Complex b)
+ {
+     i=a.i+b.i;
+     r=a.r+b.i;
+ }
+ public void display()
+ {
+     System.out.println(r+"^"+i);
+ }
+ public static void object_create()
+ {
+     Complex a=new Complex();
+     Complex b=new Complex();
+     Complex c=new Complex();
+     a.accept();
+     b.accept();
+     c.add(a,b);
+     c.display();
+ }
+}
+public class Main
+{
+    public static void main(String args[])
+    {
+        Complex.object_create();
+    }
+}
